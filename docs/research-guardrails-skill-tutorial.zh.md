@@ -124,20 +124,7 @@ AI 开始前会先把任务分成下面几类：
 
 ## 五、项目配置
 
-一般不用先配置。默认保护这些目录：
-
-```text
-data/
-datasets/
-raw/
-results/
-outputs/
-models/
-checkpoints/
-figures/
-manuscript/
-paper/
-```
+一般不用先配置。默认受保护目录和私密目录清单以 `references/configuration.md` 为准。
 
 如果新项目需要配置，只问三项：
 
@@ -271,7 +258,7 @@ Use $research-guardrails. 我的服务器数据丢失了，请先只读盘点本
 可以这样介绍：
 
 ```text
-这个仓库是一个通用 AI agent 安全规则包，主要用于科研项目里的数据保护、结果证据检查和 GitHub 发布前审计。使用时把 .claude/skills/research-guardrails/ 放进项目里，Claude Code 调 /research-guardrails，Codex 说 Use $research-guardrails。它不会替代人工判断，但会在删除、覆盖、同步、引用论文数字之前先做风险检查。
+这个仓库是一个通用 AI agent 安全规则包，主要用于科研项目里的数据保护、结果证据检查和 GitHub 发布前审计。使用时把 .claude/skills/research-guardrails/ 放进项目里；Claude Code 调 /research-guardrails，Codex 可以说 Use $research-guardrails 或让它读取 SKILL.md。它不会替代人工判断，但会在删除、覆盖、同步、引用论文数字之前先做风险检查。
 ```
 
 GitHub：

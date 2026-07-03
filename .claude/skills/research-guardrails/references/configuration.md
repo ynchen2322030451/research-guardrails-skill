@@ -4,6 +4,8 @@ The skill is safe by default and does not require setup. Use configuration only 
 
 ## Recommended Defaults
 
+This section is the source of truth for the default protected/private path lists used in README files, tutorials, and setup examples.
+
 If no `project-profile.yaml` exists, assume:
 
 - protected paths: `data/`, `datasets/`, `raw/`, `results/`, `outputs/`, `models/`, `checkpoints/`, `figures/`, `manuscript/`, `paper/`

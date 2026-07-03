@@ -45,7 +45,7 @@ If your agent does not support skills, ask it to read:
 
 ## Optional Setup
 
-The skill is safe by default. It treats common research folders such as `data/`, `results/`, `models/`, `checkpoints/`, `figures/`, and `manuscript/` as protected.
+The skill is safe by default. The default protected/private path lists are maintained in `references/configuration.md`.
 
 The bundled evidence ledger is a template; fields marked `TODO / 待填写` are placeholders to replace for your project.
 

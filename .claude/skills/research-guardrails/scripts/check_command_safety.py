@@ -13,6 +13,7 @@ BLOCK_PATTERNS = [
     (r"\brm\s+[^;\n]*-[^\s]*r(?![^\s]*f)\b", "recursive delete"),
     (r"\bfind\b[^;\n]*(?:-delete|-exec\s+rm\b)", "find deletes files"),
     (r"\brsync\b[^;\n]*--delete", "rsync delete"),
+    (r"\b(?:trash|gio\s+trash)\b", "trash command can remove directories from the working tree"),
     (r"\bRemove-Item\b[^;\n]*-Recurse", "PowerShell recursive delete"),
     (r"\bGet-ChildItem\b[^;\n]*-Recurse[^;\n]*\|\s*Remove-Item\b", "PowerShell recursive traversal piped to delete"),
     (r"\brd\s+/s\b|\brmdir\s+/s\b", "Windows recursive directory delete"),
@@ -28,7 +29,6 @@ BLOCK_PATTERNS = [
 WARN_PATTERNS = [
     (r"\$[A-Za-z_][A-Za-z0-9_]*", "contains shell variable; require ${VAR:?} assertion for destructive use"),
     (r"\s\.\s|\s\./|\s\*", "contains relative path or glob; require explicit audit"),
-    (r"\b(?:trash|gio\s+trash)\b", "trash command can still remove directories from the working tree; require target audit"),
     (r"\bmv\s+[^;\n]+\s+[^;\n]+", "move/rename can overwrite or hide data; require source, destination, and backup audit"),
     (r"\bcp\s+[^;\n]*-[^\s]*r\b", "recursive copy can overwrite or duplicate large research data; require destination audit"),
     (r"<<\s*EOF|<<\s*[A-Z]+", "heredoc script generation; cat generated script before running"),

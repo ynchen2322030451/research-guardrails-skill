@@ -39,7 +39,7 @@ Codex：Use $research-guardrails. 先分类任务风险，再按规则执行。
 
 ## 推荐默认设置
 
-一般不需要先填复杂配置。默认把 `data/`、`datasets/`、`raw/`、`results/`、`outputs/`、`models/`、`checkpoints/`、`figures/`、`manuscript/`、`paper/` 视为受保护目录；默认用“移动到隔离区”替代永久删除；默认要求论文数字必须能追溯到本地文件。
+一般不需要先填复杂配置。默认受保护目录和私密目录清单以 `references/configuration.md` 为准；默认用“移动到隔离区”替代永久删除；默认要求论文数字必须能追溯到本地文件。
 
 如果需要配置，只让 AI 向用户核实三件事：
 

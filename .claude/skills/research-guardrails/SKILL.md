@@ -11,7 +11,7 @@ Use this skill before acting on research data, results, scripts, figures, manusc
 
 This skill works without setup. If no project profile exists, use conservative defaults:
 
-- treat `data/`, `datasets/`, `raw/`, `results/`, `outputs/`, `models/`, `checkpoints/`, `figures/`, `manuscript/`, `paper/`, and `notebooks/` as protected
+- use the default protected/private path lists in `references/configuration.md`
 - use move-to-quarantine instead of permanent deletion
 - require file-backed evidence for all quantitative claims
 - block recursive/quiet/cross-shell deletion until reviewed
