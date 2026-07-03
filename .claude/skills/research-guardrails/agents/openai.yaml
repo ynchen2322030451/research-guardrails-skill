@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Guardrails"
+  short_description: "Protect research data, results, and manuscript claims"
+  default_prompt: "Use $research-guardrails to classify task risk, protect data, and require evidence-backed claims before acting."

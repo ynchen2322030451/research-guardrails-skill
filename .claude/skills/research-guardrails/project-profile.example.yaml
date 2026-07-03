@@ -1,0 +1,36 @@
+# Optional project profile for research-guardrails.
+# Keep this short. Defaults are protective enough for most projects.
+
+project_name: "My Research Project"
+
+# Ask the user to confirm these before cleanup, sync, or deletion.
+protected_paths:
+  - "data/"
+  - "datasets/"
+  - "raw/"
+  - "results/"
+  - "outputs/"
+  - "models/"
+  - "checkpoints/"
+  - "figures/"
+  - "manuscript/"
+  - "paper/"
+
+# Fill only the currently authoritative result source.
+authoritative_results:
+  - name: "main-results"
+    path: "results/"
+    notes: "Replace with the frozen result directory or summary file used by the manuscript."
+
+# Keep this minimal; add local lab-specific private folders if needed.
+never_upload:
+  - ".env"
+  - ".ssh/"
+  - "secrets/"
+  - "private/"
+  - "confidential/"
+
+default_actions:
+  deletion: "move-to-quarantine"
+  manuscript_numbers: "require-local-file-evidence"
+  setup_questions: "ask-at-most-three"
