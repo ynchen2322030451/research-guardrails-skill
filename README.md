@@ -41,6 +41,8 @@ If your agent does not support skills, ask it to read:
 
 The skill is safe by default. It treats common research folders such as `data/`, `results/`, `models/`, `checkpoints/`, `figures/`, and `manuscript/` as protected.
 
+The bundled evidence ledger is a template; fields marked `TODO / 待填写` are placeholders to replace for your project.
+
 For a lightweight project profile, run:
 
 ```bash

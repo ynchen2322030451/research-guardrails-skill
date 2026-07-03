@@ -12,13 +12,13 @@ Purpose: describe what this result track is for, such as main manuscript, robust
 
 Known evidence locations:
 
-- Dataset/source files: `待填写`
-- Split/sample metadata: `待填写`
-- Frozen model/artifact directory: `待填写`
-- Evaluation metrics: `待填写`
-- Prediction/summary tables: `待填写`
-- Figure source data: `待填写`
-- Manuscript source: `待填写`
+- Dataset/source files: `TODO / 待填写`
+- Split/sample metadata: `TODO / 待填写`
+- Frozen model/artifact directory: `TODO / 待填写`
+- Evaluation metrics: `TODO / 待填写`
+- Prediction/summary tables: `TODO / 待填写`
+- Figure source data: `TODO / 待填写`
+- Manuscript source: `TODO / 待填写`
 
 Approved headline numbers:
 
@@ -27,12 +27,12 @@ Approved headline numbers:
 
 Known limitations:
 
-- `待填写`
-- `待填写`
+- `TODO / 待填写`
+- `TODO / 待填写`
 
 Use this track when:
 
-- `待填写`
+- `TODO / 待填写`
 
 ## Claim Rules
 

@@ -10,6 +10,7 @@ import sys
 
 BLOCK_PATTERNS = [
     (r"\brm\s+[^;\n]*-[^\s]*r[^\s]*f|rm\s+[^;\n]*-[^\s]*f[^\s]*r", "recursive force delete"),
+    (r"\brm\s+[^;\n]*-[^\s]*r(?![^\s]*f)\b", "recursive delete"),
     (r"\bfind\b[^;\n]*(?:-delete|-exec\s+rm\b)", "find deletes files"),
     (r"\brsync\b[^;\n]*--delete", "rsync delete"),
     (r"\bRemove-Item\b[^;\n]*-Recurse", "PowerShell recursive delete"),
@@ -27,6 +28,9 @@ BLOCK_PATTERNS = [
 WARN_PATTERNS = [
     (r"\$[A-Za-z_][A-Za-z0-9_]*", "contains shell variable; require ${VAR:?} assertion for destructive use"),
     (r"\s\.\s|\s\./|\s\*", "contains relative path or glob; require explicit audit"),
+    (r"\b(?:trash|gio\s+trash)\b", "trash command can still remove directories from the working tree; require target audit"),
+    (r"\bmv\s+[^;\n]+\s+[^;\n]+", "move/rename can overwrite or hide data; require source, destination, and backup audit"),
+    (r"\bcp\s+[^;\n]*-[^\s]*r\b", "recursive copy can overwrite or duplicate large research data; require destination audit"),
     (r"<<\s*EOF|<<\s*[A-Z]+", "heredoc script generation; cat generated script before running"),
     (r"\bnohup\b|\bsetsid\b|&\s*$", "background job; require reviewed dry-run output first"),
     (r"\b(?:cmd|powershell|pwsh|bash|sh)\s+(?:/c|-Command|-c)\b", "cross-shell wrapper; require final resolved semantics"),
