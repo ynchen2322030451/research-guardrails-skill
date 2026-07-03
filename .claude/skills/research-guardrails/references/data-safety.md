@@ -85,7 +85,7 @@ git push
 git status --short
 ```
 
-Before a group handoff, list local-only data-like files:
+Before sharing or moving project files, list local-only data-like files:
 
 ```bash
 git status --short --untracked-files=all | rg '\.(csv|json|npz|npy|pt|pth|pkl|h5|vtu|xlsx|tex|md|py)$'

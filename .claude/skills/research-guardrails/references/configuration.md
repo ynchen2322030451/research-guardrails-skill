@@ -35,4 +35,4 @@ This writes `project-profile.yaml` in the current directory. Review it before co
 
 ## Agent Behavior
 
-If `project-profile.yaml` exists, read it before destructive operations, publication claims, or GitHub release work. If it does not exist, proceed with defaults and ask the three setup questions only when the missing information affects safety.
+If `project-profile.yaml` exists, read it before destructive operations, cleanup, sync-delete, overwrite, or recovery work. If it does not exist, proceed with defaults and ask the three setup questions only when the missing information affects safety.

@@ -15,7 +15,7 @@ Use $research-guardrails. First classify this task as text-only, plotting-only, 
 ## Universal Agent Prompt
 
 ```text
-Please follow the research-guardrails rules. Before acting, classify the task risk. For deletion, cleanup, overwrite, sync, server work, GitHub publishing, or manuscript numbers, check paths, backups, and evidence first.
+Please follow the research-guardrails rules. Before acting, classify the task risk. For deletion, cleanup, overwrite, sync, server work, or recovery, check paths, backups, and affected files first.
 ```
 
 ## Three-Question Setup Prompt

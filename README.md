@@ -1,6 +1,6 @@
 # Research Guardrails Skill
 
-A reusable AI-agent guardrail skill for research projects. It helps Claude Code, Codex, and other coding agents classify task risk, protect research data, avoid unsafe cleanup commands, and require file-backed evidence before writing quantitative claims.
+A reusable AI-agent guardrail skill for research projects. It helps Claude Code, Codex, and other coding agents classify task risk, protect research data, and avoid unsafe cleanup or overwrite commands.
 
 ## What It Protects Against
 
@@ -8,7 +8,6 @@ A reusable AI-agent guardrail skill for research projects. It helps Claude Code,
 - cross-shell destructive commands such as `cmd /c`, `bash -c`, or SSH heredocs
 - quiet/force deletion flags that hide failure signals
 - overwriting frozen results or model artifacts
-- manuscript numbers that cannot be traced to local evidence files
 - accidental upload of private, confidential, or machine-local files
 
 ## Quick Start

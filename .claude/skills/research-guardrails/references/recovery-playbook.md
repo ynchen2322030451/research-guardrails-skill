@@ -73,4 +73,4 @@ PY
 6. Source-data workbooks and figure data.
 7. Manuscript source, figure scripts, and review-response records.
 
-If current manuscript numbers are already backed by local frozen downstream products, do not rerun expensive experiments just to reduce anxiety. Document the evidence path instead.
+If current report results are already backed by local frozen downstream products, do not rerun expensive experiments just to reduce anxiety. Document the evidence path instead.

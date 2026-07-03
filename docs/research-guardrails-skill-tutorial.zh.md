@@ -61,7 +61,7 @@ git clone https://github.com/ynchen2322030451/research-guardrails-skill.git
 
 ```text
 /research-guardrails
-帮我检查这个项目能不能公开到 GitHub。
+帮我清理中间文件，但不要删除原始数据和结果文件。
 ```
 
 ### Codex
@@ -87,7 +87,7 @@ Use $research-guardrails. 帮我清理中间文件，但不要删除原始数据
 并给它这段要求：
 
 ```text
-请遵守 research-guardrails 规则。涉及删除、覆盖、同步、服务器操作、GitHub 发布或论文数字时，先检查路径、备份和证据来源。
+请遵守 research-guardrails 规则。涉及删除、覆盖、同步、服务器操作或数据恢复时，先检查路径、备份和证据来源。
 ```
 
 ---
@@ -100,8 +100,6 @@ Use $research-guardrails. 帮我清理中间文件，但不要删除原始数据
 |---|---|
 | 删除 / 清理文件 | 先列路径、先 dry-run，阻止递归强删 |
 | 覆盖结果 | 防止覆盖已冻结的模型、数据、图表和结果 |
-| 论文数字 | 要求数字能追溯到本地文件 |
-| GitHub 发布 | 检查隐私文件、数据文件、本机配置和大文件 |
 | 数据丢失后盘点 | 先只读盘点本地、Git、远端还剩什么 |
 
 ---
@@ -197,52 +195,12 @@ git clean -fdx
 
 ---
 
-## 七、GitHub 发布前
-
-可以这样问：
-
-```text
-Use $research-guardrails. 帮我检查这个仓库是否适合公开到 GitHub，重点看已经被 Git 跟踪的敏感文件、数据文件、论文文件和本机配置。
-```
-
-重点检查：
-
-```text
-.env
-.ssh/
-token / key / password
-settings.local.json
-原始数据
-实验结果
-论文草稿
-审稿意见
-PPT / Word / PDF
-压缩包
-私人路径、服务器 IP、邮箱
-```
-
-如果只是想发布一个工具，建议新建干净仓库，不要把完整科研项目仓库直接改成 public。
-
----
-
-## 八、常用示例
+## 七、常用示例
 
 ### 清理文件
 
 ```text
 Use $research-guardrails. 我想清理项目里的中间文件。请先列出将受影响的绝对路径，只做 dry-run，不要直接删除。
-```
-
-### 检查论文数字
-
-```text
-Use $research-guardrails. 请检查这段论文表述里的数字是否都有本地文件支撑；没有证据的地方标记为待核实。
-```
-
-### 检查 GitHub 可公开性
-
-```text
-Use $research-guardrails. 请审计当前仓库是否适合公开，重点检查已被 Git 跟踪的敏感文件、数据文件、论文文件和本机配置。
 ```
 
 ### 数据丢失后盘点
@@ -253,26 +211,9 @@ Use $research-guardrails. 我的服务器数据丢失了，请先只读盘点本
 
 ---
 
-## 九、组会说明版本
-
-可以这样介绍：
-
-```text
-这个仓库是一个通用 AI agent 安全规则包，主要用于科研项目里的数据保护、结果证据检查和 GitHub 发布前审计。使用时把 .claude/skills/research-guardrails/ 放进项目里；Claude Code 调 /research-guardrails，Codex 可以说 Use $research-guardrails 或让它读取 SKILL.md。它不会替代人工判断，但会在删除、覆盖、同步、引用论文数字之前先做风险检查。
-```
-
-GitHub：
-
-```text
-https://github.com/ynchen2322030451/research-guardrails-skill
-```
-
----
-
-## 十、注意事项
+## 八、注意事项
 
 - 不要让 AI 直接永久删除科研数据。
 - 不要覆盖冻结结果，除非明确给新目录或新 run tag。
-- 不要把论文数字写成结论，除非能指到具体文件。
-- 不要把完整科研项目仓库直接公开。
-- 不要上传本机配置、密钥、私有数据或未公开论文材料。
+- 不要在路径、备份、影响范围不清楚时执行清理命令。
+- 不要上传本机配置、密钥或私有数据。

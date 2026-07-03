@@ -1,6 +1,6 @@
 ---
 name: research-guardrails
-description: Use this skill for research-project tasks involving server operations, deletion/cleanup, data recovery, Git/GitHub backup, canonical results, manuscript figures/tables/text, or any agent handoff where data safety and evidence-supported claims matter. It enforces non-negotiable rules for protecting research data and preventing unsupported scientific claims.
+description: Use this skill for research-project tasks involving server operations, deletion/cleanup, data recovery, sync-delete, overwrites, frozen result artifacts, or any agent action where research data safety matters. It enforces non-negotiable rules for protecting data and avoiding unsafe destructive commands.
 ---
 
 # Research Guardrails
@@ -105,4 +105,3 @@ For group-wide reuse, keep project-specific evidence paths in `references/eviden
 - Read `references/configuration.md` for the recommended default profile and three-question setup.
 - Read `project-profile.example.yaml` when setting up the skill for a new project.
 - Read `references/recovery-playbook.md` for data-loss triage and recovery prioritization.
-- Read `references/publication-handoff.md` before preparing a GitHub/shared package for collaborators.
