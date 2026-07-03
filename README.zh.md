@@ -22,6 +22,21 @@
 Use $research-guardrails. 先分类任务风险，再按规则执行。
 ```
 
+## 最方便安装方式
+
+在你要使用的项目里，直接对 AI 说：
+
+```text
+请从 https://github.com/ynchen2322030451/research-guardrails-skill 下载 research-guardrails skill，并安装到当前项目的 .claude/skills/research-guardrails/。安装前请先检查目标目录是否已存在；如果存在，不要覆盖，先问我。安装后请告诉我 Claude Code 和 Codex 分别怎么调用。
+```
+
+安装完成后：
+
+```text
+Claude Code：/research-guardrails
+Codex：Use $research-guardrails. 先分类任务风险，再按规则执行。
+```
+
 ## 推荐默认设置
 
 一般不需要先填复杂配置。默认把 `data/`、`datasets/`、`raw/`、`results/`、`outputs/`、`models/`、`checkpoints/`、`figures/`、`manuscript/`、`paper/` 视为受保护目录；默认用“移动到隔离区”替代永久删除；默认要求论文数字必须能追溯到本地文件。

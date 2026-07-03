@@ -10,6 +10,14 @@
 
 ## 一、安装方式
 
+### 最方便方式
+
+在要使用的项目里，直接对 AI 说：
+
+```text
+请从 https://github.com/ynchen2322030451/research-guardrails-skill 下载 research-guardrails skill，并安装到当前项目的 .claude/skills/research-guardrails/。安装前请先检查目标目录是否已存在；如果存在，不要覆盖，先问我。安装后请告诉我 Claude Code 和 Codex 分别怎么调用。
+```
+
 ### Claude Code / Codex 项目内使用
 
 进入自己的项目目录，把仓库里的 skill 文件夹复制进去：

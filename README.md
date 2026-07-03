@@ -19,6 +19,12 @@ Copy the skill folder into your project:
 .claude/skills/research-guardrails/
 ```
 
+Or ask your AI agent:
+
+```text
+Please download the research-guardrails skill from https://github.com/ynchen2322030451/research-guardrails-skill and install it into the current project's .claude/skills/research-guardrails/. Before installing, check whether that target directory already exists; if it exists, do not overwrite it without asking me.
+```
+
 Then ask your agent:
 
 ```text
