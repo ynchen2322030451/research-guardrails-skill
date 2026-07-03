@@ -25,7 +25,7 @@ Before any research data, result, manuscript, recovery, or cleanup task, read
 For Claude Code users, invoke:
 
 ```text
-$research-guardrails
+/research-guardrails
 ```
 
 ## Group Rules
@@ -60,7 +60,7 @@ Check that no file contains:
 Use this with a new agent:
 
 ```text
-Use $research-guardrails. First classify the task as text-only, plotting-only,
+Use research-guardrails. First classify the task as text-only, plotting-only,
 postprocessing-only, experiment-changing, or destructive-risk. Then proceed only
 after binding any scientific claim to a local evidence file.
 ```

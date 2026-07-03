@@ -1,6 +1,12 @@
 # Minimal Prompts
 
-## Claude Code / Codex Skill Prompt
+## Claude Code Skill Prompt
+
+```text
+/research-guardrails
+```
+
+## Codex Skill Prompt
 
 ```text
 Use $research-guardrails. First classify this task as text-only, plotting-only, postprocessing-only, experiment-changing, or destructive-risk, then proceed according to the rules.

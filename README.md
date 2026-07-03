@@ -25,6 +25,12 @@ Then ask your agent:
 Use $research-guardrails. First classify this task as text-only, plotting-only, postprocessing-only, experiment-changing, or destructive-risk, then proceed according to the rules.
 ```
 
+In Claude Code, direct invocation is also:
+
+```text
+/research-guardrails
+```
+
 If your agent does not support skills, ask it to read:
 
 ```text
@@ -60,8 +66,8 @@ If it prints `BLOCK`, do not run the command. Use dry-run output, absolute paths
 
 ## Compatibility
 
-- Claude Code: use as a skill via `$research-guardrails`.
-- Codex: reference the same `SKILL.md` from `AGENTS.md` or project instructions.
+- Claude Code: use as a project skill via `/research-guardrails`.
+- Codex: use `Use $research-guardrails`, or reference the same `SKILL.md` from `AGENTS.md` or project instructions.
 - Other agents: paste the quick-start prompt and point the agent at `SKILL.md`.
 
 See [README.zh.md](README.zh.md) for Chinese usage notes.
